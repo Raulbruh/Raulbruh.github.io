@@ -7,25 +7,29 @@
     <title>RB</title>
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Koulen">
-    <style>
-        .promo-button {
-            color: #ffffff;
-        }
+    <style>      
 
         .main-hero {
             background-image: url("image/hero.jpg");
             background-size: cover;
             min-height: 400px;
+            background-position: center;
         }
 
         .primary-text {
             color: #FFA500;
         }
 
+        h1 {
+            font-family: leaguespartan;
+            color: #FFA500;
+            font-size: 32px;
+        }
+
         h2 {
             font-family: leaguespartan;
             color: #FFA500;
-            font-size: 31px;
+            font-size: 24px;
         }
 
         .carousel-control-next,
@@ -33,6 +37,21 @@
         {
             filter: invert(100%);
         }
+
+        h3 {
+            font-family: librebaskerville;
+            color: #FFA500;
+            font-size: 18.72px;
+        }
+        
+
+        p {
+            font-family: librebaskerville;
+        }
+
+        .btn-warning, .btn-warning:hover, .btn-warning:active, .btn-warning:visited {
+    background-color: #FCD900 !important;
+}
 
     </style>
 </head>
@@ -47,16 +66,16 @@
                     <img src="image/logo.jpg" class="img-fluid" style="max-width: 90px;">
                 </a>
                 <nav class="d-inline-flex mt-2 mt-md-0 ms-md-auto">
-                    <a class="me-3 py-2 text-dark text-decoration-none" href="index.html">Avaleht</a>
-                    <a class="me-3 py-2 text-dark text-decoration-none" href="galerii.html">Galerii</a>
-                    <a class="me-3 py-2 text-dark text-decoration-none" href="kontakt.html">Kontakt</a>
+                    <a class="me-3 py-2 text-dark text-decoration-none" href="index.html"><h3>Avaleht</h3></a>
+                    <a class="me-3 py-2 text-dark text-decoration-none" href="galerii.html"><h3>Galerii</h3></a>
+                    <a class="me-3 py-2 text-dark text-decoration-none" href="kontakt.html"><h3>Kontakt</h3></a>
                 </nav>
             </div>
         </header>
     </div>
     <div class="px-4 py-5 text-center main-hero">
         <h1 class="display-5 fw-bold primary-text">Raul Babajev</h1>
-        <h1 class="display-5 primary-text">Portfoolio</h1>
+        <h2 class="display-5 primary-text">Portfoolio</h2>
     </div>
     <div class="container py-3">
         <br/>
@@ -64,7 +83,7 @@
         <div class="row">
             <div class="col-sm">
                 <video id="vid" width="100%" controls autoplay muted>
-                    <source id="hvid" src="image/moodul2_desk.mp4" type=video/mp4>
+                    <source id="hvid" src="image/Moodul2_Desktop.m4v" type=video/mp4>
                 </video>
             </div>
 
@@ -170,7 +189,7 @@
     <br/>
     <br/>
     <div id="footer">
-        <p style="width: 100%; height: 3px; background-color: #f7941f"></p>
+        <p style="width: 100%; height: 3px; background-color: #FCD900"></p>
         <div class="container py-3">
             <div class="row">
                 <div class="col-3 float-start">
@@ -178,12 +197,12 @@
                 </div>
                 <div class="col-6 text-center">
                     <br>
-                    Raul Babajev
+                    <p>Raul Babajev</p>
                 </div>
                 <div class="col-3 text-center">
-                    5648 5485<br>
-                    Raul.babajev@tptlive.ee<br>
-                    Tänav 52<br>
+                    <p>5648 5485</p>
+                    <p>Raul.babajev@tptlive.ee</p>
+                    <p>Tänav 52</p>
                 </div>
             </div>
         </div>
@@ -197,17 +216,17 @@
     let source = document.getElementById("hvid");
     window.addEventListener("resize", function screenres() {
         if (window.innerWidth > 720) {
-            if (!source.src.includes("image/moodul2_desk.mp4")) {
+            if (!source.src.includes("image/Moodul2_Desktop.m4v")) {
                 vid.pause();
                 console.log("Video changed to desktop");
-                source.src = "image/moodul2_desk.mp4";
+                source.src = "image/Moodul2_Desktop.m4v";
                 vid.load();
             }
         } else {
-            if (!source.src.includes("image/moodul2_mob.mp4")) {
+            if (!source.src.includes("image/Moodul2_Mobile.m4v")) {
                 vid.pause();
                 console.log("Video changed to mobile");
-                source.src = "image/moodul2_mob.mp4";
+                source.src = "image/Moodul2_Mobile.m4v";
                 vid.load();
             }
         }
